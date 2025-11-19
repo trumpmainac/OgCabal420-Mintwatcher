@@ -20,8 +20,8 @@ async function main() {
   // Validate Telegram config and send startup ping
   try {
     telegram.validateTelegramConfigOrThrow();
-    await telegram.sendStartupPing();
-    console.log('Telegram startup ping sent');
+    const res = await telegram.sendStartupPings();
+    console.log('Telegram startup pings result:', res);
   } catch (e:any) {
     console.error('Telegram config error:', e.message);
     process.exit(1);
