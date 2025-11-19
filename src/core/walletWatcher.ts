@@ -32,7 +32,8 @@ export class WalletWatcher {
   private onLog(result: any) {
     try { mintDetector.handleLog(result); } catch (e) { /* ignore */ }
 
-    const logs: string[] = result.logs || [];
+    const value = result.value || result;
+    const logs: string[] = value.logs || [];
     for (const raw of logs) {
       if (!raw.toLowerCase().includes('transfer')) continue;
       const pks = parser.extractPubkeysFromLog(raw);

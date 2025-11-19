@@ -36,7 +36,8 @@ export class CexListener {
     // result contains {signature, err, logs, ...}
     try { mintDetector.handleLog(result); } catch (_) { /* ignore */ }
 
-    const logs: string[] = result.logs || [];
+    const value = result.value || result;
+    const logs: string[] = value.logs || [];
     for (const raw of logs) {
       const lam = parser.extractLamportsFromLog(raw);
       if (!lam) continue;
