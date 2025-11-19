@@ -1,0 +1,16 @@
+[
+  {
+    "label": "OKX: Hot Wallet-1",
+    "address": "is6MTRHEgyFLNTfYcuV4QBWLjrZBfmhVNYR6ccgr8KV",
+    "enabled": true,
+    "min_deposit_sol": 11.0,
+    "max_deposit_sol": 40.0
+  },
+  {
+    "label": "KuCoin-1",
+    "address": "BmFdpraQhkiDQE6SnfG5omcA1VwzqfXrwtNYBwWTymy6",
+    "enabled": true,
+    "min_deposit_sol": 12.5,
+    "max_deposit_sol": 110.0
+  }
+]
