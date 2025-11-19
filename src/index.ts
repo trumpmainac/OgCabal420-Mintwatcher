@@ -12,7 +12,7 @@ const API_PORT = Number(process.env.API_PORT || 3000);
 
 async function main() {
   if (!RPC_WSS) console.warn('RPC_WSS not set — ws subscriptions will fail until configured');
-  const manager = new MonitorManager(RPC_WSS, RPC_HTTP);
+  const manager = new MonitorManager(RPC_WSS);
   manager.start();
 
   const app = createServer();
