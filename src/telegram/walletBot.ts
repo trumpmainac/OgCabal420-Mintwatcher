@@ -1,5 +1,5 @@
-import events, {EVENT_NEW_WALLET, NewWalletPayload, EVENT_FORWARDED} from "../utils/events";
-import telegram, {sendToWalletBot} from './telegram';
+import events, {EVENT_NEW_WALLET, NewWalletPayload, EVENT_FORWARDED} from "../utils/events.js";
+import telegram, {sendToWalletBot} from './telegram.js';
 
 // On new wallet
 events.on(EVENT_NEW_WALLET, (p: NewWalletPayload) => {

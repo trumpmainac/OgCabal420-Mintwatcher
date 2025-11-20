@@ -1,5 +1,5 @@
 import express from "express";
-import routes from "./routes";
+import routes from "./routes.js";
 
 /**
  * Small REST API with basic token-based auth using ADMIN_API_TOKEN env var.

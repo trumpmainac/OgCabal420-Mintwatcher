@@ -1,6 +1,6 @@
-import events, {EVENT_MINT, MintPayload} from "../utils/events";
-import parser from "../utils/parser";
-import walletStore from "../storage/walletStore";
+import events, {EVENT_MINT, MintPayload} from "../utils/events.js";
+import parser from "../utils/parser.js";
+import walletStore from "../storage/walletStore.js";
 
 /**
  * Scans logs for mint-related entries coming from monitored wallets.

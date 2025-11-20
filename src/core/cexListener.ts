@@ -1,8 +1,8 @@
-import WsClient from "../rpc/wsClient";
-import walletStore from "../storage/walletStore";
-import events, {EVENT_NEW_WALLET} from "../utils/events";
-import parser from "../utils/parser";
-import mintDetector from "./mintDetector";
+import WsClient from "../rpc/wsClient.js";
+import walletStore from "../storage/walletStore.js";
+import events, {EVENT_NEW_WALLET} from "../utils/events.js";
+import parser from "../utils/parser.js";
+import mintDetector from "./mintDetector.js";
 
 /**
  * CexListener uses the WsClient with real JSON-RPC `logsSubscribe` to listen
@@ -45,11 +45,10 @@ export class CexListener {
       if (pks.length < 2) continue;
       const receiver = pks[1];
       if (lam >= cex.min_deposit_lamports && lam <= cex.max_deposit_lamports) {
-        if (!walletStore.isWatched(receiver)) {
-          const payload = {wallet: receiver, amount: lam, parentCEX: cex.label, timestamp: new Date().toISOString()};
-          walletStore.addWatched(payload);
-          events.emit(EVENT_NEW_WALLET, payload);
-        }
+        // Always treat every valid CEX deposit as a new tracking cycle
+        const payload = {wallet: receiver, amount: lam, parentCEX: cex.label, timestamp: new Date().toISOString()};
+        walletStore.addWatchedCycle(receiver, lam);
+        events.emit(EVENT_NEW_WALLET, payload);
       }
     }
   }

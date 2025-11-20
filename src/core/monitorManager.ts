@@ -1,5 +1,5 @@
-import CexListener from "./cexListener";
-import WalletWatcher from "./walletWatcher";
+import { CexListener } from "./cexListener.js";
+import WalletWatcher from "./walletWatcher.js";
 
 /**
  * Orchestrates listeners and manages in-memory state. Exposes start/stop.

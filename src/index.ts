@@ -1,13 +1,13 @@
 import dotenv from 'dotenv';
 dotenv.config();
 
-import MonitorManager from './core/monitorManager';
-import createServer from './api/server';
-import walletBot from './telegram/walletBot';
-import caBot from './telegram/caBot';
-import telegram from './telegram/telegram';
-import fallbackManager from './rpc/fallbackManager';
-import events, {EVENT_NEW_WALLET} from './utils/events';
+import MonitorManager from './core/monitorManager.js';
+import createServer from './api/server.js';
+import walletBot from './telegram/walletBot.js';
+import caBot from './telegram/caBot.js';
+import telegram from './telegram/telegram.js';
+import fallbackManager from './rpc/fallbackManager.js';
+import events, {EVENT_NEW_WALLET} from './utils/events.js';
 
 const RPC_WSS = process.env.RPC_WSS || '';
 const RPC_HTTP = process.env.RPC_HTTP || '';

@@ -1,5 +1,5 @@
-import {fetchTx as fetchTransaction} from './rpcUtils';
-import parser from '../utils/parser';
+import {fetchTx as fetchTransaction} from './rpcUtils.js';
+import parser from '../utils/parser.js';
 
 /**
  * Fallback RPC utilities: when websocket log parsing fails, use HTTP RPC to fetch

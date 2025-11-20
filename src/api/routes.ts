@@ -1,5 +1,5 @@
 import express from "express";
-import walletStore from "../storage/walletStore";
+import walletStore from "../storage/walletStore.js";
 
 const router = express.Router();
 

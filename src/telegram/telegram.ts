@@ -1,5 +1,5 @@
 import fetch from 'node-fetch';
-import events from '../utils/events';
+import events from '../utils/events.js';
 
 const CHAT_ID = process.env.TELEGRAM_CHAT_ID;
 const WALLET_TOKEN = process.env.TELEGRAM_WALLET_BOT;

@@ -1,8 +1,8 @@
-import WsClient from "../rpc/wsClient";
-import walletStore from "../storage/walletStore";
-import events, {EVENT_FORWARDED} from "../utils/events";
-import parser from "../utils/parser";
-import mintDetector from "./mintDetector";
+import WsClient from "../rpc/wsClient.js";
+import walletStore from "../storage/walletStore.js";
+import events, {EVENT_FORWARDED} from "../utils/events.js";
+import parser from "../utils/parser.js";
+import mintDetector from "./mintDetector.js";
 
 /**
  * Watches outgoing transfers for watched wallets. If a watched wallet forwards >=90% of its

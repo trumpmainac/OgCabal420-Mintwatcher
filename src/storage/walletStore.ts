@@ -1,6 +1,6 @@
 import fs from "fs";
 import path from "path";
-import {NewWalletPayload} from "../utils/events";
+import {NewWalletPayload} from "../utils/events.js";
 
 const MONITORED_PATH = path.resolve(process.cwd(), "data/monitored_wallets.json");
 const STATE_PATH = path.resolve(process.cwd(), "data/wallet_state.json");
@@ -95,6 +95,17 @@ export class WalletStore {
 
   listWatched() {
     return this.watched;
+  }
+
+  /** Add a watched wallet (result of a deposit or a forwarded) */
+  addWatchedCycle(wallet: string, lamports: number) {
+    this.watched[wallet] = {
+        received_amount: lamports,
+        parentCEX: null, // Reset parentCEX for a new cycle
+        timestamp: new Date().toISOString(),
+        forwarded: false
+    };
+    this.saveState();
   }
 }
 

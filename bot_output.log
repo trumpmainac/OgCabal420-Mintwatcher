@@ -1,0 +1,35 @@
+nohup: ignoring input
+
+> cabal420-mintwatcher@0.1.0 start /home/ubuntu/mintwatcher
+> node -r dotenv/config ./dist/index.js
+
+MonitorManager started (WS-only mode)
+(node:5207) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+wallet-ws open
+ws open
+ws open
+ws open
+Telegram startup pings result: {
+  wallet: {
+    ok: true,
+    result: {
+      message_id: 259,
+      from: [Object],
+      chat: [Object],
+      date: 1763604288,
+      text: 'Mintwatcher online (wallet bot)'
+    }
+  },
+  ca: {
+    ok: true,
+    result: {
+      message_id: 1990,
+      from: [Object],
+      chat: [Object],
+      date: 1763604288,
+      text: 'Mintwatcher online (CA bot)'
+    }
+  }
+}
+API listening on 3000

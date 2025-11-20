@@ -1,5 +1,5 @@
-import events, {EVENT_MINT, MintPayload} from "../utils/events";
-import telegram, {sendToCaBot} from './telegram';
+import events, {EVENT_MINT, MintPayload} from "../utils/events.js";
+import telegram, {sendToCaBot} from './telegram.js';
 
 // When a mint is detected, only send to CA bot
 events.on(EVENT_MINT, (p: MintPayload) => {

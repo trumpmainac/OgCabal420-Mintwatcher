@@ -1,5 +1,5 @@
-import {fetchTx} from './rpcUtils';
-import parser from '../utils/parser';
+import {fetchTx} from './rpcUtils.js';
+import parser from '../utils/parser.js';
 
 /**
  * Fallback manager: allow rare HTTP RPC inspection only when explicitly triggered
