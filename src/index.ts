@@ -33,7 +33,7 @@ async function main() {
 // Removed HTTP fallback logic as per user request for WebSocket-only operation.
 
   const app = createServer();
-  app.listen(API_PORT, () => console.log(`API listening on ${API_PORT}`));
+  app.listen(API_PORT, '0.0.0.0', () => console.log(`API listening on ${API_PORT} on 0.0.0.0`));
 }
 
 main().catch((e) => {
